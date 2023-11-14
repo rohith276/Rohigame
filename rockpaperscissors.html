@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RPS</title>
+    <link rel="stylesheet" href="rockpaperscissors.css">
+
+</head>
+
+<body>
+    <p class="title">Rock Paper Scissors
+    <p class="subtitle">Go Rapid. Check your Luck🤪</p>
+    <div class="prePhase">
+        <p cass="starttext"> Start by choosing your move.</p>
+        <div class="js-compSelection"></div>
+        <div class="js-yourSelection"></div>
+
+
+
+        <button class="rockbut" onclick="playGame('rock');">
+            <img class="rockimg" src="emojies/rock.png">
+        </button>
+        <button class="paperbut" onclick="playGame('paper');">
+
+            <img class="paperimg" src="emojies/paper.png">
+        </button>
+        <button class="scissorsbut" onclick="playGame('scissors');">
+            <img class="scissorsimg" src="emojies/scissors.png">
+        </button>
+    </div>
+    <p class="js-result resulttext"></p>
+    <p class="js-moves movestext"></p>
+    <p class="js-score scoretext"></p>
+    <button class="resetbut" onclick="
+    score.wins=0;
+    score.looses=0;
+    score.ties=0;
+    localStorage.removeItem('score');
+    updateScoreElement();
+    ">Reset Score</button>
+    <script src="rockpaperscissors.js"></script>
+
+</body>
+
+</html>
